@@ -5,4 +5,5 @@ This is a base project for front end development using updated techniques from t
 
 - New version moves to Angular and no longer has jQuery by default.
 - Build process now done with gulp. Codekit is gone.
-- Project structure better aligned with application development common/best practices.
+- The hope is that an updated project structure that better aligned with application development common/best practices and allow better scaling.
+- Updated dev environment setup to follow
