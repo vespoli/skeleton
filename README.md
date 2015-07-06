@@ -22,6 +22,7 @@ Use this as a scaffold to quickly stand up new front end projects. Can be used f
             |-- package.json
             |-- client
                 |-- Gulpfile.js
+                |-- package.json
                 |-- build
                 |-- node_modules
                 |-- src
@@ -72,4 +73,9 @@ Use this as a scaffold to quickly stand up new front end projects. Can be used f
 
 ## Getting Started
 - Set up your [development environment](http://google.com)
-- Configure your Gulp file
+- Configure your package.json with appropriate data. Add known gulp dependancies.
+- Configure your Gulpfile.js. requires should match what was added in package.json
+- In terminal, navigate to "client" folder and type `npm install`
+
+
+
