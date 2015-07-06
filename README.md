@@ -13,6 +13,8 @@ Use this as a scaffold to quickly stand up new front end projects. Can be used f
 - Using Bower when possible for external libraries/plugins/modules
 
 ## Project Structure
+
+
 |-- Project Name    
     |-- .gitignore
     |-- .gitmodules
@@ -29,7 +31,6 @@ Use this as a scaffold to quickly stand up new front end projects. Can be used f
                     |-- _default.jade
                     |-- controller.js
                     |-- style.jade
-
             |-- data
                 |-- fake-data-for-testing.jade            
             |-- js
