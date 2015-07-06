@@ -1,0 +1,1 @@
+# For non bower 3rd party scripts
