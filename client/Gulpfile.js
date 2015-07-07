@@ -30,7 +30,6 @@ gulp.task('styles', function() {
     .pipe(sass({onError: function(e) { console.log(e); } }))
     .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))
     .pipe(gulp.dest('./build/styles'))
-    .pipe(gulp.dest('../mobile/usccb/www/styles'))
     .pipe(connect.reload());
 });
 
