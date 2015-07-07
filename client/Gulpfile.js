@@ -13,16 +13,16 @@ var gulp    = require('gulp'),
     plumber = require('gulp-plumber');
 
 gulp.task('lint', function() {
-  gulp.src('./src/scripts/*.js')
+  gulp.src('./src/js/*.js')
     .pipe(jslint())
     .pipe(jslint.reporter('default'));
 });
 
 gulp.task('scripts', function() {
-  gulp.src('./src/scripts/main.js')
+  gulp.src('./src/js/main.js')
     .pipe(plumber())
     .pipe(include())
-    .pipe(gulp.dest('./build/scripts'));
+    .pipe(gulp.dest('./build/js'));
 });
 
 gulp.task('styles', function() {
