@@ -34,16 +34,16 @@ gulp.task('styles', function() {
     .pipe(connect.reload());
 });
 
-
 // NON-SPA
 gulp.task('markup', function() {
   gulp.src('./src/templates/pages/index.jade')
+    .src('./src/templates/pages/**/*.jade')
     .pipe(plumber())
     .pipe(jade())
-    .pipe(gulp.dest('./build/pages'))    
+    .pipe(gulp.dest('./build/html'))    
     .pipe(connect.reload());
 });
-//END NON_SPA
+// END NON_SPA
 
 // SPA
 // gulp.task('basemarkup', function() {
@@ -97,23 +97,32 @@ gulp.task('copy-media', function() {
 });
 
 gulp.task('watch', function() {
-  // SPA Style
+  // SPA Markup tasks - Set up for page and component "chunks" of html for angular
   // gulp.watch('./src/templates/*.jade', ['basemarkup']);
   // gulp.watch('./src/templates/**/*.jade', ['basemarkup']);
   // gulp.watch('./src/templates/layouts/*.jade', ['basemarkup','pages']);
   // gulp.watch('./src/templates/pages/*.jade', ['pages']);
   // gulp.watch('./src/components/**/*.jade', ['components', 'pages', 'basemarkup']);  
 
-  // NON-SPA
+  // NON-SPA Markup tasks
   gulp.watch('./src/components/**/*.jade', ['markup']);
   gulp.watch('./src/templates/**/*.jade', ['markup']);
-
-  gulp.watch('./src/scss/**/*.scss', ['styles']);
+  gulp.watch('./src/templates/pages/index.jade', ['markup']);
+  gulp.watch('./src/templates/pages/**/*.jade', ['markup']);
+  gulp.watch('./src/templates/layouts/*.jade', ['markup']);
+  
+  //style sheets
+  gulp.watch('./src/scss/*.scss', ['styles']);
   gulp.watch('./src/components/**/*.scss', ['styles']);
+  
+  //plain old copy stuff over
   gulp.watch('./src/scripts/**/*.js', ['scripts', 'copy-lib']);
+  gulp.watch('./src/data/*.json', ['copy-data']);
+
+  //scripts
+  gulp.watch('./src/js/*.js', ['scripts']);
   gulp.watch('./src/components/**/*.js', ['scripts']);
   gulp.watch('./src/templates/pages/**/*.js', ['scripts']);
-  gulp.watch('./src/data/*.json', ['copy-data']);
 });
 
 // gulp.task('default', ['scripts', 'styles', 'basemarkup', 'phonegap-basemarkup', 'pages', 'components', 'server', 'copy-data', 'copy-lib', 'copy-media', 'watch' ]);
