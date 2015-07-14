@@ -84,9 +84,9 @@ gulp.task('copy-data', function() {
 });
 
 gulp.task('copy-lib', function() {
-  gulp.src('./src/scripts/lib/*.js')
-    .pipe(changed('./src/scripts/lib/*.js'))
-    .pipe(gulp.dest('./build/scripts/lib'));
+  gulp.src('./src/js/lib/*.js')
+    .pipe(changed('./src/js/lib/*.js'))
+    .pipe(gulp.dest('./build/js/lib'));
 });
 
 gulp.task('copy-media', function() {
@@ -115,7 +115,7 @@ gulp.task('watch', function() {
   gulp.watch('./src/components/**/*.scss', ['styles']);
   
   //plain old copy stuff over
-  gulp.watch('./src/scripts/**/*.js', ['scripts', 'copy-lib']);
+  gulp.watch('./src/scripts/lib/*.js', ['copy-lib']);
   gulp.watch('./src/data/*.json', ['copy-data']);
 
   //scripts

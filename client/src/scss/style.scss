@@ -1,0 +1,41 @@
+// style.scss - Usage: aggregation of core, third party and component styles
+
+
+//
+// Global sass vars
+// --------------------------------------------------
+
+$mobile : 767px;
+$portrait : 768px;
+$landscape : 1024px;
+$huge: 1600px;
+
+
+//
+// Load core styles
+// --------------------------------------------------
+
+@import 'reset';
+@import 'utility';
+@import 'typography';
+@import 'forms';
+@import 'layout';
+@import 'base';
+
+//
+// Load third party css (bower and otherwise):
+// --------------------------------------------------
+// non-bower
+// @import './lib/foo-component.scss';
+// bower
+// @import '../bower_components/owlcarousel2/src/owl.carousel.scss';
+
+
+//
+// Load custom component css:
+// --------------------------------------------------
+
+//- @import '../components/form-contact/style';
+
+
+

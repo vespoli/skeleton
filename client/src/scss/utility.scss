@@ -1,0 +1,127 @@
+// utility classes;
+// hide anything;
+.hide {
+  display: none !important;
+}
+// hidden, but also needs to have it's height/width calculated (so display: none would result in 0);
+.offscreen {
+  top: -9999em;
+  left: -9999em;
+}
+
+.left {float: left !important; }
+.right {float: right !important; }
+.text-left {text-align: left !important; }
+.text-right {text-align: right !important; }
+.text-center {text-align: center !important; }
+.text-justify {text-align: justify !important; }
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+}
+ul.inline  > li,
+ol.inline  > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.block{
+  display: block;
+}
+// Windows 8 snap fix;
+// To get IE10 in snap mode does not respect the values set in the META tags;
+@-ms-viewport {
+  width: device-width;
+}
+
+@mixin clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in .5s;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in .5s;
+  animation:fadeIn ease-in .5s;
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+}
+.fade-out {
+  opacity:0;
+  -webkit-animation:fadeOut ease-in .15s;
+  -moz-animation:fadeOut ease-in .15s;
+  animation:fadeOut ease-in .15s;
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+}
+// no transitions in old IE
+.lt-ie10{
+  .fade-in{
+    opacity: 1;
+  }
+}
+
+@keyframes loading {
+  to {transform: rotate(360deg);}
+}
+ 
+@-webkit-keyframes loading {
+  to {-webkit-transform: rotate(360deg);}
+}
+
+//css spinner 
+.loading {
+  position: relative;
+  //override at the component if need be
+  min-height: 450px; 
+}
+ 
+.loading:before {
+  content: 'Loading…';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  margin-top: -18px;
+  margin-left: -18px;
+  z-index: 10000;
+}
+ 
+.loading:not(:required):before {
+  content: '';
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #000;
+  border-bottom-color: #000;
+  animation: loading .8s ease infinite;
+  -webkit-animation: loading .8s ease infinite;
+  z-index: 10000;
+}
