@@ -1,6 +1,6 @@
 # skeleton2
 
-## What's is it
+## What is it
 
 Use this as a scaffold to quickly stand up new front end projects. Can be used for either traditional multi-page, static output type projects or your latest greatest single page application. Looking for the [original skeleton](https://github.com/navigationarts/skeleton)?
 
