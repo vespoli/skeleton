@@ -1,15 +1,24 @@
 // style.scss - Usage: aggregation of core, third party and component styles
 
+//
+// Load third party css (bower and otherwise):
+// --------------------------------------------------
+// non-bower
+// @import './lib/foo-component.scss';
+// bower
+// @import '../bower_components/owlcarousel2/src/owl.carousel.scss';
+@import '../bower_components/custom-bootstrap/assets/stylesheets/bootstrap-custom';
 
 //
 // Global sass vars
 // --------------------------------------------------
 
-$mobile : 767px;
-$portrait : 768px;
-$landscape : 1024px;
-$huge: 1600px;
-
+// Create custom screen query aliases that point to bootstrap variables
+// (Note: These variables are overridden in bower_components/custom-bootstrap/assets/stylesheets/variables)
+$mobile : $screen-xs-max;
+$portrait : $screen-sm;
+$landscape : $screen-md;
+$huge: $screen-lg;
 
 //
 // Load core styles
@@ -21,15 +30,6 @@ $huge: 1600px;
 @import 'forms';
 @import 'layout';
 @import 'base';
-
-//
-// Load third party css (bower and otherwise):
-// --------------------------------------------------
-// non-bower
-// @import './lib/foo-component.scss';
-// bower
-// @import '../bower_components/owlcarousel2/src/owl.carousel.scss';
-
 
 //
 // Load custom component css:

@@ -1,0 +1,26 @@
+{
+  "name": "custom-bootstrap",
+  "version": "0.0.2",
+  "homepage": "https://github.com/Pixelmixer/skeleton2",
+  "authors": [
+    "Dustin Sparks <pixelmixer@gmail.com>"
+  ],
+  "description": "Custom package to import just the necessary components from bootstrap-sass-official.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "Bootstrap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.5"
+  }
+}
