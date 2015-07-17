@@ -1,0 +1,9 @@
+/*!
+ * Custom bootstrap variable overrides.
+ * (For configurable variables see bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables)
+ */
+ 
+$screen-md: 1024px;
+$screen-lg: 1600px;
+
+@import "../../../bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
