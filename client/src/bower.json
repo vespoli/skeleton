@@ -1,0 +1,20 @@
+{
+  "name": "skeleton-bower",
+  "version": "0.0.0",
+  "homepage": "http://google.com",
+  "authors": [
+    "David Vespoli <david.vespoli@gmail.com>"
+  ],
+  "description": "Description here",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bower-custom-bootstrap" : "git@github.com:vespoli/bower-custom-bootstrap.git"
+  }
+}
