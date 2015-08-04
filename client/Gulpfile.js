@@ -14,11 +14,23 @@ var gulp    = require('gulp'),
 
 gulp.task('lint', function() {
   gulp.src('./src/js/*.js')
-    .pipe(jslint())
-    .pipe(jslint.reporter('default'));
+    .pipe(plumber())
+    .pipe(jslint({
+      reporter: function (evt) {
+        var msg = ' ' + evt.file;
+
+        if (evt.pass) {
+          msg = '[PASS]' + msg;
+        } else {
+          msg = '[FAIL]' + msg;
+        }
+
+        console.log(msg);
+      }
+    }))
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', ['lint'], function() {
   gulp.src('./src/js/main.js')
     .pipe(plumber())
     .pipe(include())
@@ -35,12 +47,11 @@ gulp.task('styles', function() {
 
 // NON-SPA
 gulp.task('markup', function() {
-  gulp.src('./src/templates/pages/index.jade')
-    .src('./src/templates/pages/**/*.jade')
+  gulp.src('./src/templates/pages/**/*.jade')
     .pipe(plumber())
     .pipe(jade())
     .pipe(gulp.dest('./build/html'))    
-    .pipe(connect.reload());
+    .pipe(connect.reload())
 });
 // END NON_SPA
 
@@ -106,7 +117,6 @@ gulp.task('watch', function() {
   // NON-SPA Markup tasks
   gulp.watch('./src/components/**/*.jade', ['markup']);
   gulp.watch('./src/templates/**/*.jade', ['markup']);
-  gulp.watch('./src/templates/pages/index.jade', ['markup']);
   gulp.watch('./src/templates/pages/**/*.jade', ['markup']);
   gulp.watch('./src/templates/layouts/*.jade', ['markup']);
   
