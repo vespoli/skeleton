@@ -1,0 +1,15 @@
+doctype html
+html(ng-app="myApp")
+  head
+    include ../blocks/head.jade
+
+    block title
+
+  body
+    include ../../components/form-search/_default.jade
+    main
+      block content
+
+    include ../../components/footer-main/_default.jade
+        
+    include ../blocks/scripts.jade

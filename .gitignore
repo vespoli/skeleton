@@ -5,3 +5,4 @@
 /client/src/node_modules/
 /client/src/bower_components/
 npm-debug.log
+*.sublime*
