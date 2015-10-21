@@ -1,8 +1,6 @@
-/bower_components/
-/bower_components/*
-/client/node_modules/
 /client/build/
 /client/src/node_modules/
 /client/src/bower_components/
 npm-debug.log
 *.sublime*
+*.DS_Store

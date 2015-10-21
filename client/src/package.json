@@ -1,14 +1,14 @@
 {
-  "name": "skeleton",
+  "name": "allegis-aston-carter",
   "version": "1.0.0",
-  "description": "Description of this project",
+  "description": "TODO",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/foo_user/foo_project.git"
+    "url": "https://git.epam.com/david_vespoli/alsg-acsc-fe.git"
   },
   "keywords": [
     "node",
