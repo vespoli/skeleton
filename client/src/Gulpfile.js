@@ -13,6 +13,7 @@ var gulp    = require('gulp'),
     changed = require('gulp-changed'),
     plumber = require('gulp-plumber');
 
+
 gulp.task('lint', function() {
   gulp.src('./js/*.js')
     .pipe(jslint())
@@ -32,19 +33,17 @@ gulp.task('styles', function() {
     .pipe(sass({onError: function(e) { console.log(e); } }))
     .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('../build/styles'))
-    .pipe(connect.reload());
+    .pipe(gulp.dest('../build/styles'));
 });
 
-//pretty : true for non-minified html output
+
 gulp.task('markup', function() {
   gulp.src(['./templates/pages/**/*.jade','./templates/*.jade'])
     .pipe(plumber())
     .pipe(jade({
       pretty: true
     }))
-    .pipe(gulp.dest('../build/html'))    
-    .pipe(connect.reload());
+    .pipe(gulp.dest('../build/html'));
 });
 
 
@@ -75,24 +74,28 @@ gulp.task('copy-media', function() {
 
 gulp.task('watch', function() {
 
-  gulp.watch('./components/**/*.jade', ['markup']);
-  gulp.watch('./templates/**/*.jade', ['markup']);
-  gulp.watch('./templates/pages/index.jade', ['markup']);
-  gulp.watch('./templates/pages/**/*.jade', ['markup']);
-  gulp.watch('./templates/layouts/*.jade', ['markup']);
+  gulp.watch([  './components/**/*.jade',
+                './templates/**/*.jade',
+                './templates/pages/index.jade',
+                './templates/pages/**/*.jade',
+                './templates/layouts/*.jade'
+              ], ['markup']);
   
   //style sheets
-  gulp.watch('./scss/*.scss', ['styles']);
-  gulp.watch('./components/**/*.scss', ['styles']);
+  gulp.watch([  './scss/*.scss',
+                './components/**/*.scss'
+              ], ['styles']);
   
   //plain old copy stuff over
   gulp.watch('./js/lib/*.js', ['copy-lib']);
   gulp.watch('./data/*.json', ['copy-data']);
 
   //scripts
-  gulp.watch('./js/*.js', ['scripts']);
-  gulp.watch('./components/**/*.js', ['scripts']);
-  gulp.watch('./templates/pages/**/*.js', ['scripts']);
+  gulp.watch([  './js/*.js',
+                './components/**/*.js',
+                './templates/pages/**/*.js'
+              ], ['scripts']);
+
 });
 
 gulp.task('default', ['scripts', 'styles', 'markup', 'server', 'copy-data', 'copy-lib', 'copy-media', 'watch' ]);
