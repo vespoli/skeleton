@@ -9,6 +9,7 @@ var gulp    = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     include = require('gulp-include'),
     connect = require('gulp-connect'),
+    concat = require('gulp-concat'),
     changed = require('gulp-changed'),
     plumber = require('gulp-plumber');
 
@@ -19,9 +20,10 @@ gulp.task('lint', function() {
 });
 
 gulp.task('scripts', function() {
-  gulp.src('./js/main.js')
+  gulp.src(['./js/main.js','./components/**/*.js'])
     .pipe(plumber())
     .pipe(include())
+    .pipe(concat('main.js'))
     .pipe(gulp.dest('../build/js'));
 });
 
