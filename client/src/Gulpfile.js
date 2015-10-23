@@ -86,7 +86,7 @@ gulp.task('watch', function() {
   gulp.watch('./components/**/*.scss', ['styles']);
   
   //plain old copy stuff over
-  gulp.watch('./scripts/lib/*.js', ['copy-lib']);
+  gulp.watch('./js/lib/*.js', ['copy-lib']);
   gulp.watch('./data/*.json', ['copy-data']);
 
   //scripts
