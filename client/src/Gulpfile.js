@@ -28,7 +28,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function() {
-  gulp.src('./scss/style.scss')
+  gulp.src(['./scss/style.scss','./components/**/*.scss'])
     .pipe(sass({onError: function(e) { console.log(e); } }))
     .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))
     .pipe(concat('style.css'))
