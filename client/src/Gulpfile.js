@@ -35,12 +35,13 @@ gulp.task('styles', function() {
     .pipe(connect.reload());
 });
 
-//'./templates/pages/**/*.jade',
-
+//pretty : true for non-minified html output
 gulp.task('markup', function() {
   gulp.src(['./templates/pages/**/*.jade','./templates/*.jade'])
     .pipe(plumber())
-    .pipe(jade())
+    .pipe(jade({
+      pretty: true
+    }))
     .pipe(gulp.dest('../build/html'))    
     .pipe(connect.reload());
 });
