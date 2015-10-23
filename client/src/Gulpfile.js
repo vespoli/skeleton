@@ -61,8 +61,8 @@ gulp.task('copy-data', function() {
 });
 
 gulp.task('copy-lib', function() {
-  gulp.src('./js/lib/*.js')
-    .pipe(changed('./js/lib/*.js'))
+  gulp.src('./js/lib/*')
+    .pipe(changed('./js/lib/*'))
     .pipe(gulp.dest('../build/js/lib'));
 });
 

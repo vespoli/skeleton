@@ -1,7 +1,7 @@
 * {box-sizing: border-box;}
 
 @mixin border-box-shim {
-  *behavior: url(/_res/js/libs/box-sizing.htc);
+  *behavior: url(/js/libs/box-sizing.htc);
 }
 
 /**

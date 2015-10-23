@@ -1,14 +1,14 @@
 {
-  "name": "allegis-aston-carter",
+  "name": "skeleton2",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "Base front end project framework",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://git.epam.com/david_vespoli/alsg-acsc-fe.git"
+    "url": "https://github.com/vespoli/skeleton2.git"
   },
   "keywords": [
     "node",
@@ -21,7 +21,6 @@
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-changed": "^1.0.0",
-    "gulp-connect": "^2.2.0",
     "gulp-concat": "^2.6.0",
     "gulp-jade": "^0.10.0",
     "gulp-notify": "^2.0.1",

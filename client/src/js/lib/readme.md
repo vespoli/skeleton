@@ -1,1 +1,1 @@
-# For non bower 3rd party scripts
+# For non bower 3rd party scripts and offline libraries for CDN fallbacks like jQuery or Angular
