@@ -52,25 +52,25 @@ h6 small {
 }
 h1 {
   font-size: 40px;
-  @media (max-width: $mobile){
+  @media (max-width: $screen-xs-max){
     font-size:25px;
   }
 }
 h2 {
   font-size: 30px;
-  @media (max-width: $mobile){
+  @media (max-width: $screen-xs-max){
     font-size: 20px
   }
 }
 h3 {
   font-size: 24px;
-  @media (max-width: $mobile){
+  @media (max-width: $screen-xs-max){
     font-size: 18px;
   }
 }
 h4 {
   font-size: 18px;
-  @media (max-width: $mobile){
+  @media (max-width: $screen-xs-max){
     font-size: 16px;
   }
 }
