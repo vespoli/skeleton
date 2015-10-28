@@ -1,20 +1,7 @@
 // style.scss - Usage: aggregation of core, third party and component styles
 
-//
-// Global sass vars
-// --------------------------------------------------
+@import 'variables';
 
-// Create custom screen query aliases that point to bootstrap variables
-// (Note: These variables are overridden in bower_components/custom-bootstrap/assets/stylesheets/variables)
-$screen-xs-max: 967px;
-$screen-sm: 968px;
-$screen-md: 1024px;
-$screen-lg: 1200px;
-
-$mobile : $screen-xs-max;
-$portrait : $screen-sm;
-$landscape : $screen-md;
-$huge: $screen-lg;
 
 //
 // Load third party css (bower and otherwise):
