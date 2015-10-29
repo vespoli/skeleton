@@ -30,9 +30,9 @@ gulp.task('scripts', function() {
 
 gulp.task('styles', function() {
   gulp.src(['./scss/style.scss','./components/**/*.scss'])
+    .pipe(concat('style.scss'))
     .pipe(sass({onError: function(e) { console.log(e); } }))
     .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))
-    .pipe(concat('style.css'))
     .pipe(gulp.dest('../build/styles'));
 });
 
