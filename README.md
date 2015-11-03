@@ -77,6 +77,6 @@ Use this as a scaffold to quickly stand up new front end projects. Can be used f
 - Open terminal and navigate to client > src >
 - npm install
 - bower install
-
+- you should be able to hit your site at localhost:8080 or set up your hosts file to point to the new project with the alias you choose
 
 
