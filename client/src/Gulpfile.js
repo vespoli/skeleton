@@ -83,7 +83,8 @@ gulp.task('watch', function() {
   
   //style sheets
   gulp.watch([  './scss/*.scss',
-                './components/**/*.scss'
+                './components/**/*.scss', 
+                '!./scss/components-temp.scss'
               ], ['styles']);
   
   //plain old copy stuff over
