@@ -27,7 +27,7 @@ To be updated
 
 ## Troubleshooting
 
-If you are receiving dependancy errors you may be running a newer version of node than what is supported. You should install [nvm](https://github.com/creationix/nvm) . Once installed type "nvm install 0.12.0" and then "nvm use 0.12.0"
+If you are receiving dependancy errors you may be running a newer version of node than what is supported. You should install [nvm](https://github.com/creationix/nvm) . Once installed type "nvm install 0.12.0" and then "nvm use 0.12.0". If you are having trouble getting nvm installed, see this issue for help: https://github.com/creationix/nvm/issues/576
 
 
 
