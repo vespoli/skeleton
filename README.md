@@ -19,7 +19,11 @@ To be updated
 ## Getting Started
 
 - update package.json and gulpfulie.js for desired project build dependancies
+TODO: Show example
+
 - update bower.json with external library dependancies
+TODO: Show example
+
 - Open terminal and navigate to client > src >
 
 ```
