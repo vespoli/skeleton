@@ -22,8 +22,6 @@ To be updated
 - update bower.json with external library dependancies
 - Open terminal and navigate to client > src >
 
-**Install dependencies:**
-
 ```
 npm install
 bower install
