@@ -17,12 +17,17 @@ Use this as a scaffold to quickly stand up new front end projects. Can be used f
 To be updated
 
 ## Getting Started
+
 - update package.json and gulpfulie.js for desired project build dependancies
 - update bower.json with external library dependancies
 - Open terminal and navigate to client > src >
-- npm install
-- bower install
-- you should be able to hit your site at localhost:8080 or set up your hosts file to point to the new project with the alias you choose
+
+**Install dependencies:**
+
+```
+npm install
+bower install
+```
 
 
 ## Troubleshooting
