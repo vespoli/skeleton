@@ -2,7 +2,7 @@
 
 ## What is it
 
-Use this as a scaffold to quickly stand up new front end projects. Can be used for either traditional multi-page, static output type projects or your latest greatest single page application. Looking for the [original skeleton](https://github.com/navigationarts/skeleton)?
+Scaffold to quickly stand up new front end projects. Can be used for either traditional multi-page, static output type projects or your latest greatest single page application. [Original skeleton](https://github.com/navigationarts/skeleton).
 
 ## Changes from v1:
 
@@ -17,17 +17,24 @@ Use this as a scaffold to quickly stand up new front end projects. Can be used f
 To be updated
 
 ## Getting Started
+
 - update package.json and gulpfulie.js for desired project build dependancies
+TODO: Show example
+
 - update bower.json with external library dependancies
+TODO: Show example
+
 - Open terminal and navigate to client > src >
-- npm install
-- bower install
-- you should be able to hit your site at localhost:8080 or set up your hosts file to point to the new project with the alias you choose
+
+```
+npm install
+bower install
+```
 
 
 ## Troubleshooting
 
-If you are receiving dependency errors you may be running a newer version of node than what is supported. You should install [nvm](https://github.com/creationix/nvm) . Once installed type "nvm install 0.12.0" and then "nvm use 0.12.0". If you are having trouble getting nvm installed, see this issue for help: https://github.com/creationix/nvm/issues/576
+If you're receiving dependency errors you may be running a newer version of node than what is supported. Install [nvm](https://github.com/creationix/nvm) . Once installed type "nvm install 0.12.0" and then "nvm use 0.12.0". If you are having trouble getting nvm installed, see this issue for help: [https://github.com/creationix/nvm/issues/576](https://github.com/creationix/nvm/issues/576)
 
 
 
