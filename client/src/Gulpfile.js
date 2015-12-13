@@ -29,8 +29,12 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function() {
-  gulp.src(['./scss/style.scss','./components/**/*.scss'])
-    .pipe(concat('style.scss'))
+  gulp.src(['./components/**/*.scss'])
+    .pipe(concat('components-temp.scss'))
+    .pipe(gulp.dest('./scss'));
+
+  gulp.src(['./scss/style.scss','./scss/components-temp.scss'])
+    .pipe(concat('main.scss'))
     .pipe(sass({onError: function(e) { console.log(e); } }))
     .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))
     .pipe(gulp.dest('../build/styles'));
