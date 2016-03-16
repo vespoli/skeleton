@@ -11,7 +11,8 @@ var gulp    = require('gulp'),
     connect = require('gulp-connect'),
     concat = require('gulp-concat'),
     changed = require('gulp-changed'),
-    plumber = require('gulp-plumber');
+    plumber = require('gulp-plumber'),
+    rename = require("gulp-rename");
 
 
 gulp.task('lint', function() {
@@ -29,15 +30,14 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function() {
-  gulp.src(['./components/**/*.scss'])
-    .pipe(concat('components-temp.scss'))
-    .pipe(gulp.dest('./scss'));
-
-  gulp.src(['./scss/style.scss','./scss/components-temp.scss'])
-    .pipe(concat('main.scss'))
+  gulp.src(['./scss/style.scss','./components/**/*.scss'], {base: 'src'})
+    .pipe(concat('temp.scss'))
+    .pipe(gulp.dest('scss'))
     .pipe(sass({onError: function(e) { console.log(e); } }))
     .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))
+    .pipe(rename('main.css'))
     .pipe(gulp.dest('../build/styles'));
+    
 });
 
 
@@ -88,7 +88,7 @@ gulp.task('watch', function() {
   //style sheets
   gulp.watch([  './scss/*.scss',
                 './components/**/*.scss', 
-                '!./scss/components-temp.scss'
+                '!./scss/temp.scss'
               ], ['styles']);
   
   //plain old copy stuff over
