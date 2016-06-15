@@ -4,3 +4,4 @@
 npm-debug.log
 *.sublime*
 *.DS_Store
+temp.scss

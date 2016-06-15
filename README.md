@@ -27,6 +27,8 @@ TODO: Show example
 - Open terminal and navigate to client > src >
 
 ```
+npm install npm -g
+npm install -g bower
 npm install
 bower install
 ```

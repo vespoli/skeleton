@@ -68,7 +68,7 @@ gulp.task('copy-media', function() {
     .pipe(gulp.dest(buildDirectory + '/media'));
 });
 
-//this needs to be run manually
+//this needs to be run manually when you want to minify - 'gulp minify'
 gulp.task('minify', function() {
   gulp.src(buildDirectory + '/**/*').pipe(minify({
     minify: true,

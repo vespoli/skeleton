@@ -1,11 +1,11 @@
 {
   "name": "skeleton-bower",
   "version": "0.0.0",
-  "homepage": "http://google.com",
+  "homepage": "https://github.com/vespoli/skeleton2.git",
   "authors": [
     "David Vespoli <david.vespoli@gmail.com>"
   ],
-  "description": "Description here",
+  "description": "Bower components for skeleton",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "bower-custom-bootstrap" : "https://github.com/vespoli/bower-custom-bootstrap.git"
+    "bower-custom-bootstrap": "https://github.com/vespoli/bower-custom-bootstrap.git",
+    "angular": "^1.5.6"
   }
 }
