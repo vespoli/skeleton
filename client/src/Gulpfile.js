@@ -30,6 +30,13 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(buildDirectory + '/js'));
 });
 
+gulp.task('libscripts', function() {
+  gulp.src(['./js/lib/**/*.js'])
+    .pipe(plumber())
+    .pipe(include())
+    .pipe(gulp.dest(buildDirectory + '/js/lib'));
+});
+
 gulp.task('styles', function() {
   gulp.src(['./scss/style.scss','./components/**/*.scss'], {base: 'src'})
     .pipe(concat('temp.scss'))
@@ -56,11 +63,11 @@ gulp.task('copy-data', function() {
     .pipe(gulp.dest(buildDirectory + '/data'));
 });
 
-gulp.task('copy-lib', function() {
-  gulp.src('./js/lib/*')
-    .pipe(changed('./js/lib/*'))
-    .pipe(gulp.dest(buildDirectory + '/js/lib'));
-});
+// gulp.task('copy-lib', function() {
+//   gulp.src('./js/lib/*')
+//     .pipe(changed('./js/lib/*'))
+//     .pipe(gulp.dest(buildDirectory + '/js/lib'));
+// });
 
 gulp.task('copy-media', function() {
   gulp.src('./media/**/*')
@@ -107,6 +114,6 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task('default', ['scripts', 'styles', 'markup', 'copy-data', 'copy-lib', 'copy-media', 'watch' ]);
+gulp.task('default', ['scripts', 'styles', 'markup', 'copy-data', 'libscripts', 'copy-media', 'watch' ]);
 
 
