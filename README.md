@@ -2,7 +2,7 @@
 
 ## What is it
 
-Scaffold to quickly stand up new front end projects. Can be used for either traditional multi-page, static output type projects or your latest greatest single page application. [Original skeleton](https://github.com/navigationarts/skeleton).
+Scaffold to quickly stand up new front end projects. Can be used for either traditional multi-page, static output type projects or your latest greatest single page application.
 
 ## Changes from v1:
 
