@@ -57,6 +57,12 @@ gulp.task('markup', function() {
     .pipe(gulp.dest(buildDirectory + '/html'));
 });
 
+gulp.task('copy-robots', function() {
+  gulp.src('./templates/robots.txt')
+    .pipe(changed('./templates/robots.txt'))
+    .pipe(gulp.dest(buildDirectory + '/'));
+});
+
 gulp.task('copy-data', function() {
   gulp.src('./data/*.json')
     .pipe(changed('./data/*.json'))
@@ -114,6 +120,6 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task('default', ['scripts', 'styles', 'markup', 'copy-data', 'libscripts', 'copy-media', 'watch' ]);
+gulp.task('default', ['scripts', 'styles', 'markup', 'copy-data', 'copy-robots', 'libscripts', 'copy-media', 'watch' ]);
 
 
