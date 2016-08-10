@@ -39,7 +39,7 @@ gulp.task('libscripts', function() {
 
 gulp.task('styles', function() {
   gulp.src(['./scss/style.scss','./components/**/*.scss'], {base: 'src'})
-    .pipe(concat('temp.scss'))
+    .pipe(concat('./temp.scss'))
     .pipe(gulp.dest('scss'))
     .pipe(sass({onError: function(e) { console.log(e); } }))
     .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))
@@ -59,7 +59,7 @@ gulp.task('markup', function() {
 
 gulp.task('copy-robots', function() {
   gulp.src('./templates/robots.txt')
-    .pipe(changed('./templates/robots.txt'))
+    .pipe(changed('../templates/robots.txt'))
     .pipe(gulp.dest(buildDirectory + '/'));
 });
 

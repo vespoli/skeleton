@@ -1,5 +1,4 @@
 //bower components
-// = include ../bower_components/foo/foo.js.js 
 
 
 //application
