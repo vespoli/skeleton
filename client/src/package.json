@@ -31,6 +31,8 @@
     "gulp-jslint": "^1.0.1",
     "gulp-include": "^2.3.1",
     "gulp-rename": "^1.2.2",
-    "gulp-minifier": "^0.1.4"
-  }
+    "gulp-minifier": "^0.1.4",
+    "sass-bootstrap-grid-only": "^1.0.3"
+  },
+  "license": "MIT"
 }

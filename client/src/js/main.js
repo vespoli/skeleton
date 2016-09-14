@@ -1,4 +1,4 @@
-//bower components
+//3rd party, npm components
 
 
 //application

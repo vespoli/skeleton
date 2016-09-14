@@ -11,7 +11,6 @@ Scaffold to quickly stand up new front end projects. Can be used for either trad
 ├── client
 │   └── src
 │       ├── Gulpfile.js
-│       ├── bower.json
 │       ├── components
 │       │   ├── footer-main
 │       │   │   ├── _default.jade
@@ -63,17 +62,13 @@ Scaffold to quickly stand up new front end projects. Can be used for either trad
         
 ## Getting Started
 
-- update package.json and gulpfulie.js for desired project build dependancies
-
-- update bower.json with external library dependancies
+- update package.json and gulpfulie.js for desired project and build dependancies
 
 - Open terminal and navigate to client > src >
 
 ```
 npm install -g npm 
-npm install -g bower
 npm install
-bower install
 ```
 
 
