@@ -1,15 +1,11 @@
-// style.scss - Usage: aggregation of core, third party and component styles
+// style.scss
+// Usage: aggregation of core, third party and component styles
 
 @import 'variables';
 
 
 //
-// Load third party css (bower and otherwise):
-// --------------------------------------------------
-// bower
-// @import '../bower_components/owlcarousel2/src/owl.carousel.scss';
-
-//@import '../bower_components/bower-custom-bootstrap/assets/stylesheets/bootstrap-custom';
+// Load third party styles
 @import '../node_modules/sass-bootstrap-grid-only/assets/stylesheets/bootstrap-custom';
 
 
@@ -26,7 +22,7 @@
 
 
 //
-// component css aggregated and pulled here via gulp
+// component styles aggregated and dumped here, after everything else, via gulp automagically
 
 
 

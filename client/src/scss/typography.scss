@@ -1,7 +1,10 @@
+//- typography.scss
+// Usage - Just a baseline of type styles. Customize here for global styles
 $sans-serif: sans-serif;
 
 body{
-  font: 16px/1.2 $sans-serif; color: #111;
+  font: 16px/1.2 $sans-serif; 
+  color: #111;
 }
 
 p {
@@ -20,12 +23,11 @@ cite {
   font-style: normal;
 }
 a {
-  color: #27a9e1;
+  color: orange;
   text-decoration: none;
-}
-a:hover {
-  color: #2393C3;
-  // text-decoration: underline;
+  &:hover{
+    text-decoration: underline;
+  }
 }
 h1,
 h2,
@@ -33,22 +35,18 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 10px 0;
+  margin: 0 0 20px;
+  padding: 10px 0 0;
   font-family: inherit;
   font-weight: 300;
   line-height: 1.2;
   color: inherit;
   text-rendering: optimizelegibility;
-}
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-  font-weight: normal;
-  line-height: 1;
-  color: #999999;
+  small{
+    font-weight: normal;
+    line-height: 1;
+    color: #999999;
+  }
 }
 h1 {
   font-size: 40px;
@@ -94,8 +92,29 @@ h4 small {
 }
 ul,
 ol {
-  padding: 0;
-  margin: 0 0 10px 25px;
+  padding:0;
+  margin:0;
+}
+article{
+  ol, ul{
+    margin: 0 0 30px 20px; 
+    ol, ul{
+      margin: 10px 0 10px 20px;
+    }
+    li{
+      margin: 0 0 5px;
+    }
+  }
+  ul{
+    li{
+      list-style: circle;
+    }
+  }
+  ol{
+    li{
+      list-style: decimal;
+    }
+  }
 }
 ul ul,
 ul ol,
@@ -105,6 +124,7 @@ ol ul {
 }
 li {
   line-height: 20px;
+  list-style:none;
 }
 dl {
   margin-bottom: 20px;
@@ -138,20 +158,20 @@ blockquote {
   padding: 0 0 0 15px;
   margin: 0 0 20px;
   border-left: 5px solid #eeeeee;
-}
-blockquote p {
-  margin-bottom: 0;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 25px;
-}
-blockquote small {
-  display: block;
-  line-height: 20px;
-  color: #999999;
-}
-blockquote small:before {
-  content: '\2014 \00A0';
+  p{
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+  }
+  small{
+    display: block;
+    line-height: 20px;
+    color: #999999;
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
 }
 q:before,
 q:after,
@@ -161,17 +181,9 @@ blockquote:after {
 }
 address {
   display: block;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   font-style: normal;
-  line-height: 20px;
+  line-height: 1.3;
 }
 
 
-/*lists*/
-nav {
-  ul, ol {
-    list-style: none;
-  }
-}
-ul{padding:0;margin:0;}
-li{list-style:none;}

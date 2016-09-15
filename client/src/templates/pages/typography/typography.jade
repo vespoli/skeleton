@@ -1,0 +1,101 @@
+extends ../../layouts/layout
+
+block vars
+  -var page = 'typography';
+
+block title
+  title Typography page
+
+block content
+  .container
+    .row
+      .col-lg-12
+        article
+          h1 Typography (h1). Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+          p
+            strong Ellentesque  strong habitant morbi tristique
+            |  senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. 
+            em Aenean em ultricies mi vitae est.
+            |  Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, 
+            code commodo code vitae
+            | , ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. 
+            a(href='#') Donec link non enim
+            |  in turpis pulvinar facilisis. Ut felis.
+
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
+          
+          h2 Paragraph Spacing (h2). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
+
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.          
+
+          h3 Blockquote
+
+          blockquote
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.                              
+          
+          h3 Lists (h3). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+          ol
+            li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            li Aliquam tincidunt mauris eu risus.
+
+          ol
+            li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            li Aliquam tincidunt mauris eu risus.
+            li Nested ol parent
+              ol
+                li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                li Aliquam tincidunt mauris eu risus.
+
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.      
+
+          ul
+            li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            li Aliquam tincidunt mauris eu risus.
+
+          ul
+            li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            li Aliquam tincidunt mauris eu risus.
+            li Nested ol parent
+              ul
+                li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                li Aliquam tincidunt mauris eu risus.
+
+            
+          h3 Address 
+          //- http://microdatagenerator.org/
+          address(itemscope='', itemtype='http://schema.org/LocalBusiness')
+            div(itemprop='name') White House
+            div Email: 
+              span(itemprop='email')
+                a(href='mailto:hello@whitehouse.gov') hello@whitehouse.gov
+            div Phone: 
+              span(itemprop='telephone') 2024561111
+            div Url: 
+              span(itemprop='url')
+                a(href='https://www.whitehouse.gov/') https://www.whitehouse.gov/
+            div(itemprop='paymentAccepted', style='display: none') cash, check, credit card
+            div(itemtype='http://schema.org/GeoCoordinates', itemscope='', itemprop='geo')
+              meta(itemprop='latitude', content='38.360303')
+              meta(itemprop='longitude', content='-81.621184')
+            div(itemtype='http://schema.org/PostalAddress', itemscope='', itemprop='address')
+              div(itemprop='streetAddress') 1600 Pennsylvania Ave NW
+              div
+                span(itemprop='addressLocality') Washington
+                | , 
+                span(itemprop='addressRegion') DC
+                span(itemprop='postalCode') 20500
+
+          h3 Special Characters
+          ul
+            li Spanish: (á, é, í, ó, ú, ü, ñ, ¿, ¡)
+            li French: (à, â, ä, æ, ç, è, é, ê, ë, î, ï, ô, œ, ù, û, ü)
+            li German: (ä, å, æ, ğ, ë, ö, ø, ß, ş, ü, ÿ)
+            li Currency: ($, ¢, €, ƒ, ₣, ₧, ¥)
+
+
+
+
