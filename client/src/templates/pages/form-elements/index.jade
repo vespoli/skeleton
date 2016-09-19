@@ -1,0 +1,32 @@
+extends ../../layouts/layout
+
+block vars
+  -var page = 'form-elements';
+
+block title
+  title Form Elements test page
+
+block content
+  .container
+    .row
+      .col-sm-12
+        h1 Form Elements
+        form(ng-controller="FormElementsCtrl")
+          .row
+            .col-sm-6            
+              .input-wrap                
+                input(type="text" value="" name="firstName" ng-model="user.firstName" required)
+                label(for=firstName) First Name
+            .col-sm-6            
+              .input-wrap                
+                input(type="text" value="" name="lastName" ng-model="user.lastName" required)
+                label(for=lastName) Last Name                  
+          .row
+            .col-sm-6            
+              .input-wrap                
+                input(type="email" value="" name="email" ng-model="user.email" required)
+                label(for="email") Email Address
+            .col-sm-6            
+              .input-wrap                
+                input(type="tel" value="" name="phone" ng-model="user.phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required)
+                label(for="phone") Phone Number                                  
