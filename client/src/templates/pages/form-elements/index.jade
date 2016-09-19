@@ -28,5 +28,14 @@ block content
                 label(for="email") Email Address
             .col-sm-6            
               .input-wrap                
-                input(type="tel" value="" name="phone" ng-model="user.phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required)
+                input(type="tel" value="" name="phone" ng-model="user.phone" pattern="[0-9]{3}(-)?(.)?[0-9]{3}(-)?(.)?[0-9]{4}" required)
                 label(for="phone") Phone Number                                  
+          .row
+            .col-sm-6            
+              .input-wrap.ng-cloak                
+                select(type="alien" value="" name="alien" ng-model="user.alien" required)
+                  option(ng-repeat="alien in aliens" value="{{alien}}") {{alien}}
+                //- label(for="alien") Favorite Alien
+            .col-sm-6            
+              .input-wrap                
+                                                          

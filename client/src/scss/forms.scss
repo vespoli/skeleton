@@ -136,13 +136,8 @@ input[type="radio"],
 input[type="checkbox"] {
   width: auto;
 }
-select,
-input[type="file"] {
-  height: 40px;
-  line-height: 30px;
-}
 select {
-  width: 220px;
+  width: 100%;
   border: 1px solid #cccccc;
   background-color: #ffffff;
 }
@@ -302,7 +297,9 @@ input[type="submit"].btn::-moz-focus-inner {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
-  input{
+  input, select{
+    border: none;
+    appearance: none;
     position: relative;
     top: 0;
     left: 0;
@@ -310,16 +307,18 @@ input[type="submit"].btn::-moz-focus-inner {
     outline: 0;
     background: none;
     margin: 0;    
-    &:valid, &:invalid.ng-invalid-pattern, &:invalid.ng-invalid-email {
+    &:valid{
     // Hides the label
       background: white; 
+    }
+    &:invalid.ng-invalid-pattern, &:invalid.ng-invalid-email {
+      box-shadow: inset 0 1px 0px rgba(255, 0, 0, 0.5);
+      background: #f9eae9;
     }
     &:focus {
       background: #e9e9e9;
     }
-    &:invalid.ng-invalid-pattern, &:invalid.ng-invalid-email {
-      box-shadow: inset 0 1px 0px rgba(255, 0, 0, 0.5);
-    }
+    
     //small label
     &:focus + label, &:valid + label, 
     &:invalid.ng-invalid-email + label, &:invalid.ng-invalid-pattern + label,

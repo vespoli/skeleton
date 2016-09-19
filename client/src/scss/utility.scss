@@ -125,3 +125,6 @@ ol.inline  > li {
   -webkit-animation: loading .8s ease infinite;
   z-index: 10000;
 }
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
