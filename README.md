@@ -66,9 +66,15 @@ Scaffold to quickly stand up new front end projects. Can be used for either trad
 
 - Open terminal and navigate to client > src >
 
+If needed
 ```
 npm install -g npm 
+```
+
+then
+```
 npm install
+gulp
 ```
 
 
